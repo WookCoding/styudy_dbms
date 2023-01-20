@@ -266,12 +266,30 @@ WHERE HEIGHT > (SELECT AVG(HEIGHT) FROM PLAYER);
  * 
  * */
 
+/*EMP 테이블 사원번호로 DEPT 테이블의 지역 검색*/
+SELECT * FROM EMP;
+SELECT * FROM DEPT;
 
+SELECT ENAME, LOC FROM DEPT D  
+JOIN EMP E
+ON D.DEPTNO = E.DEPTNO;
 
+/*PLAYER 테이블에서 송종국 선수가 속한 팀의 전화번호 검색하기*/
+SELECT PLAYER_NAME, TEAM_NAME, TEL FROM TEAM T
+JOIN PLAYER P
+ON P.PLAYER_NAME = '송종국' AND P.TEAM_ID = T.TEAM_ID;
 
+/*JOBS 테이블에서 JOB_ID로 직원들의 JOB_TITLE, EMAIL, 성, 이름 검색*/
+SELECT JOB_TITLE, EMAIL, FIRST_NAME, LAST_NAME  FROM JOBS J
+JOIN EMPLOYEES E 
+ON J.JOB_ID = E.JOB_ID;
 
-
-
+/*EMP 테이블의 SAL을 SALGRADE 테이블의 등급으로 나누기*/
+/*EMPLOYEES 테이블에서 HIREDATE가 2003~2005년까지인 사원의 정보와 부서명 검색*/
+/*JOB_TITLE 중 'Manager'라는 문자열이 포함된 직업들의 평균 연봉을 JOB_TITLE별로 검색*/
+/*EMP 테이블에서 ENAME에 L이 있는 사원들의 DNAME과 LOC 검색*/
+/*축구 선수들 중에서 각 팀별로 키가 가장 큰 선수들 전체 정보 검색*/
+/*EMP 테이블에서 사원의 이름과 매니저 이름을 검색*/
 
 
 
