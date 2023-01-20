@@ -49,16 +49,16 @@
 
 4. 물리적 설계(물리 모델링)
 	__________________________________________
-	│TBL_MEMBER				 │
+	│TBL_MEMBER                              │
 	│----------------------------------------│
-	│MEMBER_ID : NUMBER PK_MEMBER	 	 │
+	│MEMBER_ID : NUMBER PK_MEMBER            │
 	│----------------------------------------│
 	│MEMBER_IDENTIFICATION : VARCHAR2 UNIQUE │	
-	│MEMBER_PASSWORD : VARCHAR2 NOT NULL	 │
-	│MEMBER_NAME : VARCHAR2 NOT NULL	 │
-	│MEMBER_ADDRESS : VARCHAR2 NOT NULL	 │			
+	│MEMBER_PASSWORD : VARCHAR2 NOT NULL     │
+	│MEMBER_NAME : VARCHAR2 NOT NULL         │
+	│MEMBER_ADDRESS : VARCHAR2 NOT NULL      │			
 	│MEMBER_EMAIL : VARCHAR2 NOT NULL UNIQUE │	
-	│MEMBER_BIRTH : DATE		         │
+	│MEMBER_BIRTH : DATE                     │
 	│MEMBER_PHONE : VARCHAR2 NOT NULL UNIQUE │
 	│________________________________________│
 
@@ -91,19 +91,19 @@
 
 4. 물리적 설계(물리 모델링)
 	___________________________________
-	│TBL_FLOWER			  │			
+	│TBL_FLOWER                       │			
 	│---------------------------------│
-	│FLOWER_ID : NUMBER PK_FLOWER	  │	
+	│FLOWER_ID : NUMBER PK_FLOWER     │	
 	│---------------------------------│
 	│FLOWER_NAME : VARCHAR2 NOT NULL  │
 	│FLOWER_COLOR : VARCHAR2 NOT NULL │
-	│FLOWER_PRICE : NUMBER NOT NULL	  │
+	│FLOWER_PRICE : NUMBER NOT NULL   │
 	│_________________________________│
 	
 	___________________________________
-	│TBL_POT			  │
+	│TBL_POT                          │
 	│---------------------------------│
-	│POT_ID : NUMBER PK_POT		  │
+	│POT_ID : NUMBER PK_POT           │
 	│---------------------------------│
 	│POT_COLOR : VARCHAR2 NOT NULL    │
 	│POT_SHAPE : VARCHAR2 NOT NULL    │
@@ -183,26 +183,26 @@
 
 4. 물리적 설계(물리 모델링)
 	_____________________________________
-	│TBL_PET			    │
+	│TBL_PET                            │
 	│-----------------------------------│
-	│PET_ID : NUMBER PK_ANIMAL	    │
+	│PET_ID : NUMBER PK_ANIMAL          │
 	│-----------------------------------│
 	│PET_NAME : VARCHAR2 NOT NULL       │
 	│PET_DISEASE : VARCHAR2 NOT NULL    │
 	│PET_TYPE : NUMBER FK_FLOWER_ID     │
 	│GUARDIAN_ID : NUMBER FK_GUARDIAN_ID│
-	│PET_AGE : NUMBER NOT NULL	    │
+	│PET_AGE : NUMBER NOT NULL          │
 	|___________________________________│
 
 	_________________________________________________________
-	│TBL_GUARDIAN						│
+	│TBL_GUARDIAN                                           │
 	│-------------------------------------------------------│
-	│GUARDIAN_ID : NUMBER PK_GUARDIAN			│
+	│GUARDIAN_ID : NUMBER PK_GUARDIAN                       │
 	│-------------------------------------------------------│
-	│GUARDIAN_NAME 	 : VARCHAR2 NOT NULL			│
-	│GUARDIAN_ADDRESS : VARCHAR2 NOT NULL			│
-	│GUARDIAN_PHONE	 : VARCHAR2 NOT NULL UK_GUARDIAN_PHONE	│
-	│GUARDIAN_AGE	 : NUMBER				│
+	│GUARDIAN_NAME 	 : VARCHAR2 NOT NULL                    │
+	│GUARDIAN_ADDRESS : VARCHAR2 NOT NULL                   │
+	│GUARDIAN_PHONE	 : VARCHAR2 NOT NULL UK_GUARDIAN_PHONE  │
+	│GUARDIAN_AGE	 : NUMBER                               │
 	│_______________________________________________________│
 
 
