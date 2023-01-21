@@ -285,10 +285,28 @@ JOIN EMPLOYEES E
 ON J.JOB_ID = E.JOB_ID;
 
 /*EMP 테이블의 SAL을 SALGRADE 테이블의 등급으로 나누기*/
+SELECT S.GRADE FROM EMP E
+JOIN SALGRADE S
+ON S.LOSAL <= E.SAL AND S.HISAL >= E.SAL
+GROUP BY S.GRADE;
+
 /*EMPLOYEES 테이블에서 HIREDATE가 2003~2005년까지인 사원의 정보와 부서명 검색*/
+SELECT D.DEPARTMENT_NAME,E.FIRST_NAME ||' ' || E.LAST_NAME 사원이름 FROM EMPLOYEES E
+JOIN DEPARTMENTS D
+ON E.HIRE_DATE >= '2003-01-01' AND E.HIRE_DATE <= '2005-12-31';
+
 /*JOB_TITLE 중 'Manager'라는 문자열이 포함된 직업들의 평균 연봉을 JOB_TITLE별로 검색*/
+SELECT AVG(SALARY) FROM JOBS J
+JOIN EMPLOYEES E
+ON JOB_TITLE LIKE '%Manager%';
+
 /*EMP 테이블에서 ENAME에 L이 있는 사원들의 DNAME과 LOC 검색*/
+SELECT DNAME, LOC FROM EMP E
+JOIN DEPT D
+ON ENAME LIKE '%L%';
+
 /*축구 선수들 중에서 각 팀별로 키가 가장 큰 선수들 전체 정보 검색*/
+
 /*EMP 테이블에서 사원의 이름과 매니저 이름을 검색*/
 
 
