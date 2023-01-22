@@ -306,8 +306,19 @@ JOIN DEPT D
 ON ENAME LIKE '%L%';
 
 /*축구 선수들 중에서 각 팀별로 키가 가장 큰 선수들 전체 정보 검색*/
+SELECT T.TEAM_ID ,MAX(HEIGHT) FROM PLAYER P
+JOIN TEAM T
+ON P.TEAM_ID = T.TEAM_ID
+GROUP BY T.TEAM_ID
+ORDER BY T.TEAM_ID;
 
-/*EMP 테이블에서 사원의 이름과 매니저 이름을 검색*/
+/*EMP 테이블에서 사원의 이름과 매니저 이름을 검색??*/
+SELECT * FROM EMP;
+
+SELECT * FROM EMPLOYEES;
+
+SELECT * FROM DEPT;
+
 
 
 
