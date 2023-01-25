@@ -314,9 +314,7 @@ ORDER BY T.TEAM_ID;
 
 /*EMP 테이블에서 사원의 이름과 매니저 이름을 검색??*/
 SELECT * FROM EMP;
-
 SELECT * FROM EMPLOYEES;
-
 SELECT * FROM DEPT;
 
 
